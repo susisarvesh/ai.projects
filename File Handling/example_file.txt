@@ -1,0 +1,11 @@
+10. File Handling Projects
+Count lines in a file.
+Copy one file to another.
+Merge two text files.
+Search for a word in a file.
+Replace text inside a file.
+Build a CSV reader.
+SATNC CSV to JSON.
+Build a text log analyzer.
+Read files larger than 1 GB line by line.
+Build a file backup utility.

@@ -1,0 +1,60 @@
+2026-07-07 09:00:01,123 INFO auth req_id=8f3a12 User login attempt username=john.doe
+2026-07-07 09:00:01,456 INFO auth req_id=8f3a12 User authenticated successfully user_id=1023
+2026-07-07 09:00:02,102 INFO api req_id=8f3a12 GET /api/dashboard status=200 duration=145ms
+
+2026-07-07 09:01:15,223 INFO payment req_id=1b9e43 Payment initiated order_id=ORD1001 amount=1999
+2026-07-07 09:01:16,781 ERROR payment req_id=1b9e43 Payment gateway timeout after 5000ms
+2026-07-07 09:01:16,782 WARN payment req_id=1b9e43 Retrying payment attempt=2
+
+2026-07-07 09:02:10,904 INFO inventory req_id=9c1d88 Stock check product_id=P1002
+2026-07-07 09:02:11,121 WARN inventory req_id=9c1d88 Low stock product_id=P1002 remaining=3
+2026-07-07 09:02:12,542 INFO inventory req_id=9c1d88 Stock reserved quantity=2
+
+2026-07-07 09:03:40,221 INFO auth req_id=4fa882 User login attempt username=alice
+2026-07-07 09:03:41,002 ERROR auth req_id=4fa882 Invalid password username=alice
+2026-07-07 09:03:41,003 WARN auth req_id=4fa882 Failed login attempt count=3
+
+2026-07-07 09:05:20,101 INFO api req_id=3e0bc1 POST /api/orders
+2026-07-07 09:05:20,345 INFO database req_id=3e0bc1 SQL Query executed duration=25ms
+2026-07-07 09:05:20,512 INFO api req_id=3e0bc1 Response status=201 duration=411ms
+
+2026-07-07 09:08:02,771 INFO scheduler Daily backup started
+2026-07-07 09:08:45,218 INFO scheduler Backup completed duration=42s
+
+2026-07-07 09:10:14,903 INFO api req_id=7d8fa3 GET /api/products
+2026-07-07 09:10:15,001 ERROR database req_id=7d8fa3 ConnectionError: Connection refused
+Traceback (most recent call last):
+  File "db.py", line 48, in connect
+    raise ConnectionError("Connection refused")
+ConnectionError: Connection refused
+
+2026-07-07 09:10:16,113 INFO database req_id=7d8fa3 Reconnecting to database
+2026-07-07 09:10:17,532 INFO database req_id=7d8fa3 Connection established
+2026-07-07 09:10:17,900 INFO api req_id=7d8fa3 Response status=200 duration=2997ms
+
+2026-07-07 09:15:01,882 INFO upload req_id=2de981 File upload started filename=report.pdf
+2026-07-07 09:15:04,144 INFO upload req_id=2de981 File uploaded successfully size=2.4MB
+
+2026-07-07 09:18:12,320 WARN cache Cache miss key=user_profile_1023
+2026-07-07 09:18:12,511 INFO cache Cache populated key=user_profile_1023
+
+2026-07-07 09:20:43,651 INFO email req_id=6adf10 Sending welcome email user_id=1055
+2026-07-07 09:20:44,923 INFO email req_id=6adf10 Email delivered provider=SES
+
+2026-07-07 09:22:18,101 ERROR api req_id=5bc890 HTTP 500 Internal Server Error
+2026-07-07 09:22:18,103 ERROR api req_id=5bc890 ValueError: Invalid order total
+Traceback (most recent call last):
+  File "orders.py", line 92, in calculate_total
+    raise ValueError("Invalid order total")
+ValueError: Invalid order total
+
+2026-07-07 09:25:10,442 INFO monitoring CPU=43% Memory=61% Disk=58%
+2026-07-07 09:26:12,814 WARN monitoring CPU usage exceeded threshold CPU=89%
+2026-07-07 09:27:55,191 INFO monitoring CPU=47% Memory=64% Disk=59%
+
+2026-07-07 09:30:01,001 INFO scheduler Cleanup job started
+2026-07-07 09:30:15,664 INFO scheduler Deleted temporary files count=245
+2026-07-07 09:30:16,101 INFO scheduler Cleanup job completed
+
+2026-07-07 09:32:48,232 INFO auth req_id=aa98f2 User logout user_id=1023
+2026-07-07 09:35:19,812 INFO server Health check passed status=OK uptime=12d4h
