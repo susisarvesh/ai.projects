@@ -1,0 +1,17 @@
+tasks =[{
+    "id": 1,
+    "title": "Learn Python",
+    "completed": False
+},{
+
+    "id": 2,
+    "title": "Learn Docker",
+    "completed": False
+},
+{
+
+    "id": 3,
+    "title": "Learn Git",
+    "completed": True
+},
+]
