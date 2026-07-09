@@ -1,0 +1,17 @@
+{
+  "app": {
+    "name": "",
+    "environment": "development"
+  },
+  "database": {
+    "host": "",
+    "port": 5432,
+    "username": "dummy_user",
+    "password": "super_secret_password",
+    "database_name": "dummy_db"
+  },
+  "features": {
+    "enable_logging": true,
+    "max_connections": 100
+  }
+}
